@@ -1,0 +1,155 @@
+/* Resetear los márgenes y el padding en el body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex; /* Utilizamos flexbox para organizar el diseño en fila */
+    flex-wrap: wrap; /* Permite que los elementos fluyan a la siguiente línea cuando no haya suficiente espacio */
+}
+
+.titulo-con-efecto {
+    text-shadow: 2px 2px 4px #00d0ff;
+    font-size: 36px;
+    color: #000;
+}
+
+/* Estilo para el encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    width: 100%; /* El encabezado ocupa todo el ancho */
+}
+
+.imagen {
+    transition: transform 0.3s; /* Agrega una transición suave para el efecto */
+}
+
+.imagen:hover {
+    transform: scale(1.2); /* Hace que la imagen se agrande al 120% cuando se pasa el cursor por encima */
+}
+/* Estilo para la barra de navegación */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Coloca los elementos de navegación a la derecha */
+    align-items: center;
+    width: 100%; /* La barra de navegación ocupa todo el ancho */
+    background-color: #333;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+nav a:hover {
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+a:nth-child(1) {
+    filter: hue-rotate(270deg);
+}
+
+a:nth-child(2) {
+    filter: hue-rotate(110deg);
+}
+
+a span {
+    position: absolute;
+    display: block;
+}
+
+/* Estilo para el sidebar */
+.sidebar {
+    width: 60px;
+    height: 100%;
+    background-color: #222;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    overflow: hidden;
+    border-radius: 1rem 0 0 1rem;
+    transition: width 0.75s ease;
+    position: fixed;
+}
+
+.sidebar button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Estilo para el contenido principal */
+.content {
+    margin-left: 60px;
+    padding: 20px;
+    transition: margin-left 0.75s ease;
+}
+
+/* Estilo para el botón de alternar el sidebar */
+.toggle-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.toggle-button:focus {
+    outline: none;
+}
+
+/* Estilo para el contenido principal */
+main {
+    flex: 2; /* El contenido principal ocupa dos tercios del espacio disponible */
+    padding: 20px;
+}
+
+/* Estilo para la barra lateral */
+aside {
+    flex: 1; /* La barra lateral ocupa un tercio del espacio disponible */
+    background-color: #eee;
+    padding: 20px;
+}
+
+/* Estilo para el pie de página */
+footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+body {
+    background-image: url("imagenes2/ciudad.jpeg");
+    background-attachment: fixed;
+    background-size: cover; /* Ajusta el tamaño de la imagen de fondo */
+}
